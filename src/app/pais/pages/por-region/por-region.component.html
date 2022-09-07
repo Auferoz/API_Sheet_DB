@@ -1,0 +1,19 @@
+<p><i class="fa-solid fa-list-check"></i> Select a List</p>
+
+<div class="animate__animated animate__fadeIn animate__faster">
+    <div class="row">
+        <div class="col-12">
+            <button *ngFor="let region of regiones"
+                    [class]="getClaseCSS( region )"
+                    (click)="activarRegion( region )">
+                    <i class="fa-solid fa-table"></i> {{ region | titlecase }}
+            </button>
+    
+        </div>
+    </div>
+
+</div>
+
+<div *ngIf="paises.length > 0" class="row">
+        <app-pais-tabla [paises]="paises"></app-pais-tabla>
+</div>

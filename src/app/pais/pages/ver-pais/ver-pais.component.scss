@@ -1,0 +1,21 @@
+.contenedor{
+    display: grid;
+	grid-template-columns: 1fr 3fr;
+	gap: 20px;
+}
+
+.f-montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+
+li{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.mask-custom {
+    backdrop-filter: contrast(140%) brightness(100%) saturate(100%) sepia(50%) hue-rotate(0deg) grayscale(0%) invert(0%) blur(0px);
+    mix-blend-mode: lighten;
+    background: rgba(255, 255, 255, 0.5);
+    // background: rgba(161, 44, 199, 0.31);
+    opacity: 1;
+  }
