@@ -3,6 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { Country } from '../interfaces/pais.interface';
+import { User } from '../interfaces/user.interface';
 import { tap } from 'rxjs/operators';
 
 @Injectable({
@@ -24,6 +25,11 @@ export class PaisService {
     const url = `${ this.apiUrl }/search?title=*${ termino }*&sheet=_GamesP_2022`;
     
     return this.http.get<Country[]>( url );
+  }
+
+  getUser( id: string ):Observable<User>{
+    const url = `${ this.apiUrl }/search?id=1&sheet=_Usuarios`;
+    return this.http.get<User>( url );
   }
 
   buscarCapital( termino: string ):Observable<Country[]>{

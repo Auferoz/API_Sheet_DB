@@ -1,0 +1,28 @@
+@media (max-width: 991.98px) {
+    .avatar {
+        width: 7rem !important;
+        height: 7rem !important;
+        line-height: 7rem !important;
+      }
+  }
+  .w-70 {
+      width: 70% !important;
+  }
+  .fs-12 {
+      font-size: 12px;
+  }
+  .fs-18 {
+      font-size: 18px;
+  }
+  .fs-15 {
+      font-size: 15px;
+  }
+  .fs-50 {
+      font-size: 50px;
+  }
+  .products-list .product-item{
+      transition: all .5s;
+  }
+  .navbar-nav .dropdown-menu {
+    position: absolute !important;
+  }
