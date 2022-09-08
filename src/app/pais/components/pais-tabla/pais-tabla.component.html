@@ -11,17 +11,19 @@
     </div>
 </div>  -->
 
-<div class="contenedor mt-5">
+<div class="contenedor my-5">
   <div class="contenedor-card">
     <!-- Card -->
     <div *ngFor="let game of paises; let i = index"
-      class="bg-image card shadow-1-strong"
+      class="bg-image card shadow-1-strong pointer"
       style="background-image: url('{{game.poster}}');height:383px;"
+      [routerLink]="['/pais', game.id]"
     >
-      <div class="card-body text-white d-flex align-items-end">
-        <h5 class="card-title">{{game.title}}</h5>
+    <div class="mask mask-custom"></div>
+      <div class="card-body text-white card-texto">
+        <h5 class="card-title">{{game.title | titlecase }}</h5>
         <p class="card-text">
-          {{game.date_start}}
+          {{game.date_start }}
         </p>
       </div>
     </div>

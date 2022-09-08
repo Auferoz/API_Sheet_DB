@@ -1,43 +1,76 @@
-<section>
+<section *ngIf="!user; else divNavBar">
+  <!-- navbar-->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg bg-white shadow">
+
+      <a class="navbar-brand fw-bold text-uppercase text-base ms-md-0 ms-4">
+        <span class="col-title text-dark">BURST</span>
+      </a>
+
+    </nav>
+  </header>
+  <!-- navbar-->
+</section>
+
+<ng-template #divNavBar>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <!-- Container wrapper -->
     <div class="container-fluid">
-
-      <!-- Navbar brand -->
-      <a class="navbar-brand" href="#"><i class="fa-solid fa-file-excel me-3"></i> Data_Base {{pais[0].title}}</a>
-
       <!-- Toggle button -->
       <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
-    </div>
-    <!-- Container wrapper -->
 
-
-    <!-- Right elements -->
-    <div class="d-flex align-items-center me-5">
-      <!-- Avatar -->
-      <div class="dropdown">
-        <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
-          role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-          <img src="../../../assets/images/Avatar.png" class="rounded-circle" height="50" alt="Avatar" loading="lazy" />
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15" alt="MDB Logo"
+            loading="lazy" />
         </a>
-        <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated" aria-labelledby="userInfo">
-          <div class="dropdown-header text-gray-700">
-            <h6 class="text-uppercase font-weight-bold"><i class="fa-regular fa-address-card"></i> Alfredo Saavedra</h6>
-            <small><i class="fa-solid fa-code"></i> Web Developer</small>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Title</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="capital" routerLinkActive="active">Status</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="region" routerLinkActive="active">List_Played</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <!-- Avatar -->
+        <div class="dropdown">
+          <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
+            role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+            <img src="{{user[0].avatar}}" class="rounded-circle border border-dark" height="50"
+              alt="Black and White Portrait of a Man" loading="lazy" />
+          </a>
+          <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated" aria-labelledby="userInfo">
+            <div class="dropdown-header text-gray-700">
+              <h6 class="text-uppercase font-weight-bold"><i class="fa-regular fa-address-card"></i> {{user[0].firstname +' '+ user[0].lastname}} </h6>
+              <small><i class="fa-solid fa-code"></i> {{user[0].job}} </small>
+            </div>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item pe-true" id="proximamente"> <i class="fa-solid fa-list-ul"></i> Proximamente</a>
+            <a class="dropdown-item pe-true"> <i class="fa-solid fa-gear"></i> Settings</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="login.html"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
           </div>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item pe-true" id="proximamente"> <i class="fa-solid fa-list-ul"></i> Proximamente</a>
-          <a class="dropdown-item pe-true"> <i class="fa-solid fa-gear"></i> Settings</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
         </div>
       </div>
+      <!-- Right elements -->
     </div>
-    <!-- Right elements -->
+    <!-- Container wrapper -->
   </nav>
   <!-- Navbar -->
-</section>
+</ng-template>

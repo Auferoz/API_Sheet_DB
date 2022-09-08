@@ -3,6 +3,7 @@
 <div class="animate__animated animate__fadeIn animate__faster">
     <div class="row">
         <div class="col-12">
+            
             <button *ngFor="let region of regiones"
                     [class]="getClaseCSS( region )"
                     (click)="activarRegion( region )">

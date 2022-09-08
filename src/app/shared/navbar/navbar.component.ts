@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap, tap } from 'rxjs/operators';
 
-import { Country } from 'src/app/pais/interfaces/pais.interface';
 import { PaisService } from 'src/app/pais/services/pais.service';
+import { Country } from 'src/app/pais/interfaces/pais.interface';
+import { User } from 'src/app/pais/interfaces/user.interface';
 
 @Component({
   selector: 'app-navbar',
@@ -13,7 +14,7 @@ import { PaisService } from 'src/app/pais/services/pais.service';
 export class NavbarComponent implements OnInit {
 
   pais!: Country[];
-
+  user!: User[];
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -24,10 +25,10 @@ export class NavbarComponent implements OnInit {
     
     this.activatedRoute.params
       .pipe(
-        switchMap( ({ id }) => this.paisService.getPaisPorAlpha( id )  ),
+        switchMap( ({  }) => this.paisService.getUser( )  ),
         tap( console.log )
       )
-      .subscribe( pais => this.pais = pais );
+      .subscribe( user => this.user = user );
   }
 
 }

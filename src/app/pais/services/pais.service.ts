@@ -27,11 +27,6 @@ export class PaisService {
     return this.http.get<Country[]>( url );
   }
 
-  getUser( id: string ):Observable<User>{
-    const url = `${ this.apiUrl }/search?id=1&sheet=_Usuarios`;
-    return this.http.get<User>( url );
-  }
-
   buscarCapital( termino: string ):Observable<Country[]>{
     const url = `${ this.apiUrl }/search?title=*${ termino }*&sheet=_GamesP_2023`;
     return this.http.get<Country[]>( url );
@@ -42,14 +37,15 @@ export class PaisService {
     return this.http.get<Country>( url );
   }
 
+  getUser():Observable<User>{
+    const url = `${ this.apiUrl }/search?id=1&sheet=_Usuarios`;
+    return this.http.get<User>( url );
+  }
+
   buscarRegion( region: string ): Observable<Country[]> {
-
     const url = `${ this.apiUrl }?sheet=${ region }`;
-
     return this.http.get<Country[]>( url, )
-            .pipe(
-              tap( console.log )
-            )
+            .pipe(tap( console.log ))
   }
 
 }
