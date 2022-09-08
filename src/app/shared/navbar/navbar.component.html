@@ -1,10 +1,10 @@
 <section *ngIf="!user; else divNavBar">
   <!-- navbar-->
   <header class="header">
-    <nav class="navbar navbar-expand-lg bg-white shadow">
+    <nav class="navbar navbar-expand-lg bg-dark shadow">
 
       <a class="navbar-brand fw-bold text-uppercase text-base ms-md-0 ms-4">
-        <span class="col-title text-dark">BURST</span>
+        <span class="col-title text-white">BURST</span>
       </a>
 
     </nav>
@@ -14,14 +14,11 @@
 
 <ng-template #divNavBar>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <!-- Container wrapper -->
     <div class="container-fluid">
       <!-- Toggle button -->
-      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
+
 
       <!-- Collapsible wrapper -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -45,6 +42,10 @@
         <!-- Left links -->
       </div>
       <!-- Collapsible wrapper -->
+
+      <a class="navbar-brand fw-bold text-uppercase text-base ms-md-0 ms-4">
+        <span class="col-title text-white">BURST</span>
+      </a>
 
       <!-- Right elements -->
       <div class="d-flex align-items-center">
