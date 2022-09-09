@@ -25,7 +25,7 @@ export class PorRegionComponent {
 
   getClaseCSS( region: string ): string {
     return (region === this.regionActiva) 
-              ? 'btn btn-primary me-3 my-3'
+              ? 'btn btn-primary me-3 mb-3'
               : 'btn btn-outline-primary me-3 mb-3';
   }
 

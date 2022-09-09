@@ -14,6 +14,7 @@
 
 <ng-template #divNavBar>
   <!-- Navbar -->
+  <header class="header">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <!-- Container wrapper -->
     <div class="container-fluid">
@@ -22,15 +23,13 @@
 
       <!-- Collapsible wrapper -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- Navbar brand -->
-        <a class="navbar-brand mt-2 mt-lg-0" href="#">
-          <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="15" alt="MDB Logo"
-            loading="lazy" />
-        </a>
         <!-- Left links -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Title</a>
+            <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="title" routerLinkActive="active">Title</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="capital" routerLinkActive="active">Status</a>
@@ -43,7 +42,7 @@
       </div>
       <!-- Collapsible wrapper -->
 
-      <a class="navbar-brand fw-bold text-uppercase text-base ms-md-0 ms-4">
+      <a class="navbar-brand fw-bold text-uppercase text-base ms-0">
         <span class="col-title text-white">BURST</span>
       </a>
 
@@ -53,8 +52,8 @@
         <div class="dropdown">
           <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
             role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-            <img src="{{user[0].avatar}}" class="rounded-circle border border-dark" height="50"
-              alt="Black and White Portrait of a Man" loading="lazy" />
+            <img src="{{user[0].avatar}}" class="rounded-circle border border-white" height="50"
+              alt="{{user[0].user}}" loading="lazy" />
           </a>
           <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated" aria-labelledby="userInfo">
             <div class="dropdown-header text-gray-700">
@@ -62,7 +61,7 @@
               <small><i class="fa-solid fa-code"></i> {{user[0].job}} </small>
             </div>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item pe-true" id="proximamente"> <i class="fa-solid fa-list-ul"></i> Proximamente</a>
+            <a class="dropdown-item pe-true" id="proximamente" routerLink="region"> <i class="fa-solid fa-list-ul"></i> List Played</a>
             <a class="dropdown-item pe-true"> <i class="fa-solid fa-gear"></i> Settings</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="login.html"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
@@ -74,4 +73,5 @@
     <!-- Container wrapper -->
   </nav>
   <!-- Navbar -->
+  </header>
 </ng-template>

@@ -98,7 +98,8 @@
 }
 .mask-custom:hover{
     backdrop-filter: contrast(140%) brightness(100%) saturate(100%) sepia(50%) hue-rotate(0deg) grayscale(0%) invert(0%) blur(0px);
-    mix-blend-mode: lighten;
-    background: rgba(255, 255, 255, 0.3);
+    // mix-blend-mode: lighten;
+    background: rgba(0, 0, 0, 0.3);
     opacity: 1;
+    border-radius: 10px;
 }
