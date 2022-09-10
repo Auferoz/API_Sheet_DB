@@ -1,0 +1,39 @@
+<div *ngIf="!moviesList; else divPais" class="alert alert-info">
+    Espere por favor...
+</div>
+
+<ng-template #divPais>
+    <div class="contenedor rounded-7 p-5 bg-image" style="background-image: url('{{moviesList[0].image}}'); height: 90vh;">
+        <div class="mask mask-custom">
+            <!-- <div class="mask" style="background-color: rgba(51, 45, 45, 0.7);"> -->
+            <div class="d-flex justify-content-end align-items-start me-3 mt-2 h-100">
+                <!-- <h1 class="text-white mb-0">Page title</h1> -->
+                <a class="nav-link" routerLink="../../movies"><i class="fa-solid fa-rotate-left"></i> back</a>
+            </div>
+        </div>
+
+
+        <div class="contenedor-poster">
+
+            <div class="card rounded-7">
+                <img [src]="moviesList[0].poster" alt="{{moviesList[0].title}}" class="w-100 h-auto rounded-7">
+            </div>
+
+
+            <div class="card borderNeon rounded-7 mt-5" style="width: 18rem;height:12rem;">
+                <div class="card-header px-3 py-2 h2 m-0 f-nunitoSans text-white borderBottomNeon text-shadow">{{moviesList[0].title}}</div>
+                <div class="card-body p-2">
+                    <p class="card-text f-montserrat text-white text-shadow m-0"> <b>Released: </b> {{moviesList[0].released}}</p>
+                    <p class="card-text f-montserrat text-white text-shadow m-0"> <b>Runtime: </b> {{moviesList[0].runtime}}</p>
+                    <p class="card-text f-montserrat text-white text-shadow m-0"> <b>Genre: </b> {{moviesList[0].genre}}</p>
+                    <p class="card-text f-montserrat text-white text-shadow m-0"> <b>Rating: </b> {{moviesList[0].rating}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+
+        </div>
+
+    </div>
+</ng-template>

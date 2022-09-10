@@ -6,12 +6,7 @@ import { PaisService } from '../../services/pais.service';
 @Component({
   selector: 'app-por-region',
   templateUrl: './por-region.component.html',
-  styles: [ `
-    button {
-      margin-right: 5px;
-    }
-  
-  `
+  styles: [ ``
   ]
 })
 export class PorRegionComponent {

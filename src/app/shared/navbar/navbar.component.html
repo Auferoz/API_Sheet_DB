@@ -1,15 +1,32 @@
 <section *ngIf="!user; else divNavBar">
-  <!-- navbar-->
+  <!-- Navbar -->
   <header class="header">
-    <nav class="navbar navbar-expand-lg bg-dark shadow">
-
-      <a class="navbar-brand fw-bold text-uppercase text-base ms-md-0 ms-4">
-        <span class="col-title text-white">BURST</span>
-      </a>
-
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <!-- Toggle button -->
+  
+  
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+            </li>
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+  
+        <a class="navbar-brand fw-bold text-uppercase text-base ms-0">
+          <span class="col-title text-white">BURST</span>
+        </a>
+      </div>
+      <!-- Container wrapper -->
     </nav>
-  </header>
-  <!-- navbar-->
+    <!-- Navbar -->
+    </header>
 </section>
 
 <ng-template #divNavBar>
@@ -26,16 +43,19 @@
         <!-- Left links -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+            <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><i class="fa-solid fa-house"></i> Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="title" routerLinkActive="active">Title</a>
+            <a class="nav-link" routerLink="title" routerLinkActive="active"><i class="fa-solid fa-magnifying-glass"></i> Title</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="capital" routerLinkActive="active">Status</a>
+            <a class="nav-link" routerLink="capital" routerLinkActive="active"><i class="fa-solid fa-magnifying-glass"></i> Status</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="region" routerLinkActive="active">List_Played</a>
+            <a class="nav-link" routerLink="region" routerLinkActive="active"><i class="fa-solid fa-gamepad"></i> Games List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="movies" routerLinkActive="active"><i class="fa-solid fa-film"></i> Movies List</a>
           </li>
         </ul>
         <!-- Left links -->

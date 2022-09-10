@@ -1,13 +1,9 @@
-.f-montserrat{
-    font-family: 'Montserrat', sans-serif;
-}
-
 li{
     font-family: 'Nunito Sans', sans-serif;
 }
 
 .bg-hdark{
-    background-color: #212529 !important;
+    background-color: #292e32 !important;
     height: 100%;
     min-height: 93.2vh;
 }

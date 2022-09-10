@@ -10,6 +10,8 @@ import { VerPaisComponent } from './pages/ver-pais/ver-pais.component';
 import { PaisTablaComponent } from './components/pais-tabla/pais-tabla.component';
 import { PaisInputComponent } from './components/pais-input/pais-input.component';
 import { HomeComponent } from './pages/home/home.component';
+import { MoviesListComponent } from './pages/movies-list/movies-list.component';
+import { VerMovieComponent } from './pages/movies-list/ver-movie/ver-movie.component';
 
 
 
@@ -21,13 +23,18 @@ import { HomeComponent } from './pages/home/home.component';
     VerPaisComponent,
     PaisTablaComponent,
     PaisInputComponent,
-    HomeComponent
+    HomeComponent,
+    MoviesListComponent,
+    VerMovieComponent
   ],
   exports: [
     PorCapitalComponent,
     PorPaisComponent,
     PorRegionComponent,
-    VerPaisComponent
+    VerPaisComponent,
+    HomeComponent,
+    MoviesListComponent,
+    VerMovieComponent
   ],
   imports: [
     CommonModule,

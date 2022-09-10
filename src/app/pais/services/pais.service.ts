@@ -5,13 +5,14 @@ import { Observable } from 'rxjs';
 import { Country } from '../interfaces/pais.interface';
 import { User } from '../interfaces/user.interface';
 import { tap } from 'rxjs/operators';
+import { MoviesREST } from '../interfaces/movies.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PaisService {
 
-  private apiUrl: string = 'https://sheetdb.io/api/v1/uj1vwr8ger7n8';
+  private apiUrl: string = 'https://sheet.best/api/sheets/2ac89502-af3e-4874-9292-eaf4a1d9c6b8';
   
 
   // https://sheetdb.io/
@@ -22,8 +23,8 @@ export class PaisService {
 
   // https://sheet.best/admin
   // https://sheet.best/api/sheets/2ac89502-af3e-4874-9292-eaf4a1d9c6b8
-  // BUSQUEDA DE SHEET: https://sheet.best/api/sheets/2ac89502-af3e-4874-9292-eaf4a1d9c6b8/tabs/_GamesL_2022/
-  // BUSQUEDA DE REGISTRO: https://sheet.best/api/sheets/2ac89502-af3e-4874-9292-eaf4a1d9c6b8/tabs/_GamesL_2022/title/*Final*
+  // BUSQUEDA DE SHEET: https://sheet.best/api/sheets/2ac89502-af3e-4874-9292-eaf4a1d9c6b8/tabs/_GamesP_2022/
+  // BUSQUEDA DE REGISTRO: https://sheet.best/api/sheets/2ac89502-af3e-4874-9292-eaf4a1d9c6b8/tabs/_GamesP_2022/title/*Final*
 
 
   // get httpParams () {
@@ -33,30 +34,41 @@ export class PaisService {
   constructor( private http: HttpClient ) { }
 
   buscarPais( termino: string ): Observable<Country[]> {
-    const url = `${ this.apiUrl }/search?title=*${ termino }*&sheet=_GamesP_2022`;
+    const url = `${ this.apiUrl }/tabs/_GamesP_2022/title/*${ termino }*`;
     
     return this.http.get<Country[]>( url );
   }
 
   buscarCapital( termino: string ):Observable<Country[]>{
-    const url = `${ this.apiUrl }/search?title=*${ termino }*&sheet=_GamesP_2023`;
+    const url = `${ this.apiUrl }/tabs/_GamesP_2022/title/*${ termino }*`;
     return this.http.get<Country[]>( url );
   }
 
   getPaisPorAlpha( id: string ):Observable<Country>{
-    const url = `${ this.apiUrl }/search?id=${ id }&sheet=_GamesP_2022`;
+    const url = `${ this.apiUrl }/tabs/_GamesP_2022/id/${ id }`;
     return this.http.get<Country>( url );
   }
 
   getUser():Observable<User>{
-    const url = `${ this.apiUrl }/search?id=1&sheet=_Usuarios`;
+    const url = `${ this.apiUrl }/tabs/_Usuarios/id/1`;
     return this.http.get<User>( url );
   }
 
   buscarRegion( region: string ): Observable<Country[]> {
-    const url = `${ this.apiUrl }?sheet=${ region }`;
+    const url = `${ this.apiUrl }/tabs/${ region }`;
     return this.http.get<Country[]>( url, )
             .pipe(tap( console.log ))
+  }
+
+  buscarMovies( sheet: string ): Observable<MoviesREST[]> {
+    const url = `${ this.apiUrl }/tabs/${ sheet }`;
+    return this.http.get<MoviesREST[]>( url, )
+            .pipe(tap( console.log ))
+  }
+
+  getMovieById( id: string ):Observable<MoviesREST>{
+    const url = `${ this.apiUrl }/tabs/_MoviesL_2022/id/${ id }`;
+    return this.http.get<MoviesREST>( url );
   }
 
 }
