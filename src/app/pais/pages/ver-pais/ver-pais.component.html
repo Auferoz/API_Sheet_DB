@@ -24,17 +24,17 @@
 
     </div>
     
-    <div class="card" style="width: 25rem;height:100px;">
+    <div class="card" style="width: 25rem;height:12rem;">
     <div class="card-header px-3 h2"><i class="fa-regular fa-address-book me-2"></i> <span class="f-montserrat">{{pais[0].title}}</span></div>
       <ul class="list-group list-group-light">
-        <li class="list-group-item px-3 py-2"><b>Released: </b> {{pais[0].released}} <i class="fa-solid fa-calendar"></i> </li>
+        <li class="list-group-item px-3 py-2"><b>Released: </b> {{pais[0].released | titlecase}} <i class="fa-solid fa-calendar"></i> </li>
         <li class="list-group-item px-3 py-2"><b>Genre: </b> {{pais[0].genre}} <i class="fa-solid fa-bookmark"></i> </li>
         <li class="list-group-item px-3 py-2"><b>Platform: </b> {{pais[0].platform_name}} <i class="{{pais[0].platform_icon}}"></i> </li>
         <li class="list-group-item px-3 py-2"><b>Rating: </b> {{pais[0].rating}} <i class="fa-solid fa-star"></i> </li>
         <li class="list-group-item px-3 py-2"><b>Archievements: </b> {{pais[0].achievements_obt}} / {{pais[0].achievements_ttl}} <i class="fa-solid fa-trophy"></i> </li>
         <li class="list-group-item px-3 py-2"><b>Hours: </b> {{pais[0].hours_mytb}} / {{pais[0].hours_hltb}} <i class="fa-solid fa-clock"></i> </li>
         <li class="list-group-item px-3 py-2"><b>Date Start: </b> {{pais[0].date_start}}  <i class="fa-solid fa-calendar-week"></i> </li>
-        <li class="list-group-item px-3 py-2"><b>Date End: </b> {{pais[0].date_end}} <i class="fa-solid fa-calendar-week"></i> </li>
+        <li class="list-group-item px-3 py-2"><b>Date End: </b> {{pais[0].date_mainstory}} <i class="fa-solid fa-calendar-week"></i> </li>
         <li class="list-group-item px-3 py-2"><b>Video: </b>
             <a class="btn text-white f-montserrat ms-3 m-0 p-0 px-2 py-0" style="background-color: #ed302f;" target="_blank"
                 href="https://www.youtube.com/embed/{{pais[0].video}}" role="button">
@@ -42,14 +42,14 @@
                 Trailer
             </a>
         </li>
-        <li class="list-group-item px-3 py-3"><b>Status: </b> {{pais[0].status}} <i class="fa-solid fa-bars-progress"></i>
+        <li class="list-group-item px-3 py-2"><b>Status: </b> {{pais[0].status}} <i class="fa-solid fa-bars-progress"></i>
             <div class="progress rounded-7" style="height:15px;">
                 <div
                   class="progress-bar bg-{{pais[0].color}} progress-bar-striped progress-bar-animated"
                   role="progressbar"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  [style]="'width:' + pais[0].any + '%;'"
+                  [style]="'width:' + '100%;'"
                 >{{pais[0].any}} %</div>
               </div>
         </li>

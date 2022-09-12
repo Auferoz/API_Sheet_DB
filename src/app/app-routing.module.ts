@@ -30,7 +30,7 @@ const routes: Routes = [
         component: PorRegionComponent
     },
     {
-        path: 'pais/:id',
+        path: 'game/:id',
         component: VerPaisComponent
     },
     {

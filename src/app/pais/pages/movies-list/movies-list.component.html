@@ -17,7 +17,7 @@
   <div class="contenedor-card">
 
     <!-- Card -->
-    <div *ngFor="let movie of moviesList; let i = index"
+    <div *ngFor="let movie of moviesList; let i = index "
       class="card shadow-1-strong pointer"
       style="background-image: url('{{movie.poster}}');background-size:cover;height:322px;"
       [routerLink]="['/movie', movie.id]"

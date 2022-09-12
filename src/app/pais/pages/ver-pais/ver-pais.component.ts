@@ -14,6 +14,7 @@ export class VerPaisComponent implements OnInit {
 
   pais!: Country[];
 
+
   constructor( 
     private activatedRoute: ActivatedRoute,
     private paisService: PaisService

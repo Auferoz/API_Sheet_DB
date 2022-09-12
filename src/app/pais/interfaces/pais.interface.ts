@@ -17,6 +17,7 @@ export interface Country {
     hours_mytb:       string;
     hours_hltb:       string;
     date_start:       string;
-    date_end:         string;
+    date_mainstory:   string;
+    date_completed:   string;
     last_dayplay:     string;
 }
