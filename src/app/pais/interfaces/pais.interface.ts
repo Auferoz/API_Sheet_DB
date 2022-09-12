@@ -11,7 +11,7 @@ export interface Country {
     video:            string;
     color:            string;
     status:           string;
-    any:              string;
+    any:              number;
     achievements_obt: string;
     achievements_ttl: string;
     hours_mytb:       string;

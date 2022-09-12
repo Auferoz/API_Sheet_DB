@@ -10,7 +10,7 @@ import { Country } from '../../interfaces/pais.interface';
 })
 export class PaisTablaComponent implements OnInit {
 
-  @Input() paises: Country[] =[];
+  @Input() paises: Country[] = [];
 
   constructor() { }
 

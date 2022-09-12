@@ -21,14 +21,13 @@ export class VerPaisComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-
+    
     this.activatedRoute.params
       .pipe(
-        switchMap( ({ id }) => this.paisService.getPaisPorAlpha( id )  ),
+        switchMap( ({ id }) => this.paisService.getGameById( id )  ),
         tap( console.log )
-      )
-      .subscribe( pais => this.pais = pais );
-
+        )
+        .subscribe( pais => this.pais = pais );
   }
 
 }

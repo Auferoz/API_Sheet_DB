@@ -49,8 +49,9 @@
                   role="progressbar"
                   aria-valuemin="0"
                   aria-valuemax="100"
-                  [style]="'width:' + '100%;'"
-                >{{pais[0].any}} %</div>
+                  [attr.aria-valuenow]="pais[0].any"
+                  [attr.style]="'width:'+ pais[0].any  +'%;'"
+                >{{ pais[0].any }} %</div>
               </div>
         </li>
       </ul>

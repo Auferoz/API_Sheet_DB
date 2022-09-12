@@ -28,7 +28,7 @@ export class MoviesListComponent implements OnInit {
     this.movieListActiva = sheet;
     this.moviesList = [];
 
-    this.paisService.buscarMovies( sheet )
+    this.paisService.getMoviesList( sheet )
       .subscribe( moviesList => this.moviesList = moviesList );
   }
 

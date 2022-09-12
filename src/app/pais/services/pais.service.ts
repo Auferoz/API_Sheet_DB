@@ -54,13 +54,18 @@ export class PaisService {
     return this.http.get<User>( url );
   }
 
-  buscarRegion( region: string ): Observable<Country[]> {
+  getGameList( region: string ): Observable<Country[]> {
     const url = `${ this.apiUrl }/tabs/${ region }`;
     return this.http.get<Country[]>( url, )
             .pipe(tap( console.log ))
   }
 
-  buscarMovies( sheet: string ): Observable<MoviesREST[]> {
+  getGameById( id: string ):Observable<Country>{
+    const url = `${ this.apiUrl }/tabs/_GamesP_2022/id/${ id }`;
+    return this.http.get<Country>( url );
+  }
+
+  getMoviesList( sheet: string ): Observable<MoviesREST[]> {
     const url = `${ this.apiUrl }/tabs/${ sheet }`;
     return this.http.get<MoviesREST[]>( url, )
             .pipe(tap( console.log ))

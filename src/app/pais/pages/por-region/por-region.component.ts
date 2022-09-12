@@ -31,7 +31,7 @@ export class PorRegionComponent {
     this.regionActiva = region;
     this.paises = [];
 
-    this.paisService.buscarRegion( region )
+    this.paisService.getGameList( region )
       .subscribe( paises => this.paises = paises );
   }
 
