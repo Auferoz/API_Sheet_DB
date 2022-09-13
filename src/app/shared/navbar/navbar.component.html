@@ -1,35 +1,4 @@
-<section *ngIf="!user; else divNavBar">
-  <!-- Navbar -->
-  <header class="header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <!-- Container wrapper -->
-      <div class="container-fluid">
-        <!-- Toggle button -->
-  
-  
-        <!-- Collapsible wrapper -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- Left links -->
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-            </li>
-          </ul>
-          <!-- Left links -->
-        </div>
-        <!-- Collapsible wrapper -->
-  
-        <a class="navbar-brand fw-bold text-uppercase text-base ms-0">
-          <span class="col-title text-white">BURST</span>
-        </a>
-      </div>
-      <!-- Container wrapper -->
-    </nav>
-    <!-- Navbar -->
-    </header>
-</section>
-
-<ng-template #divNavBar>
+<section>
   <!-- Navbar -->
   <header class="header">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -75,13 +44,83 @@
         <div class="dropdown">
           <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
             role="button" data-mdb-toggle="dropdown" aria-expanded="false">
-            <img src="{{user[0].avatar}}" class="rounded-circle border border-white" height="50"
-              alt="{{user[0].user}}" loading="lazy" />
+            <img src="../../../assets/images/Avatar.png" class="rounded-circle border border-white" height="50"
+              alt="Auferoz" loading="lazy" />
           </a>
           <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated" aria-labelledby="userInfo">
             <div class="dropdown-header text-gray-700">
-              <h6 class="text-uppercase font-weight-bold"><i class="fa-regular fa-address-card"></i> {{user[0].firstname +' '+ user[0].lastname}} </h6>
-              <small><i class="fa-solid fa-code"></i> {{user[0].job}} </small>
+              <h6 class="text-uppercase font-weight-bold"><i class="fa-regular fa-address-card"></i> Alfredo Saavedra </h6>
+              <small><i class="fa-solid fa-code"></i> Developer </small>
+            </div>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item pe-true" id="proximamente" routerLink="region"> <i class="fa-solid fa-list-ul"></i> List Played</a>
+            <a class="dropdown-item pe-true"> <i class="fa-solid fa-gear"></i> Settings</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="login.html"> <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+          </div>
+        </div>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+  </header>
+</section>
+
+<ng-template>
+  <!-- Navbar -->
+  <header class="header">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><i class="fa-solid fa-house"></i> Home</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLink="title" routerLinkActive="active"><i class="fa-solid fa-magnifying-glass"></i> Title</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="capital" routerLinkActive="active"><i class="fa-solid fa-magnifying-glass"></i> Status</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" routerLink="region" routerLinkActive="active"><i class="fa-solid fa-gamepad"></i> Games List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="movies" routerLinkActive="active"><i class="fa-solid fa-film"></i> Movies List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="" routerLinkActive=""><i class="fa-solid fa-tv"></i> Series List</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+
+      <a class="navbar-brand fw-bold text-uppercase text-base ms-0">
+        <span class="col-title text-white">BURST</span>
+      </a>
+
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <!-- Avatar -->
+        <div class="dropdown">
+          <a class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#" id="navbarDropdownMenuAvatar"
+            role="button" data-mdb-toggle="dropdown" aria-expanded="false">
+            <img src="../../../assets/images/Avatar.png" class="rounded-circle border border-white" height="50"
+              alt="Auferoz" loading="lazy" />
+          </a>
+          <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated" aria-labelledby="userInfo">
+            <div class="dropdown-header text-gray-700">
+              <h6 class="text-uppercase font-weight-bold"><i class="fa-regular fa-address-card"></i> Alfredo Saavedra </h6>
+              <small><i class="fa-solid fa-code"></i> Developer </small>
             </div>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item pe-true" id="proximamente" routerLink="region"> <i class="fa-solid fa-list-ul"></i> List Played</a>

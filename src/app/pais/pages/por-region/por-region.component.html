@@ -1,9 +1,7 @@
-<p class="text-white"><i class="fa-solid fa-list-check text-white"></i> Select a List</p>
-
 <div class="animate__animated animate__fadeIn animate__faster">
     <div class="row">
-        <div class="col-12">
-            
+        <div class="col-12 text-inline">
+            <p class="text-white"><i class="fa-solid fa-list-check text-white"></i> Select a List</p>
             <button *ngFor="let region of regiones"
                     [class]="getClaseCSS( region )"
                     (click)="activarRegion( region )">

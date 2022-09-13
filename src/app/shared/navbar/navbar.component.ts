@@ -13,8 +13,7 @@ import { User } from 'src/app/pais/interfaces/user.interface';
 })
 export class NavbarComponent implements OnInit {
 
-  pais!: Country[];
-  user!: User[];
+  // user!: User[];
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -23,12 +22,12 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     
-    this.activatedRoute.params
-      .pipe(
-        switchMap( ({  }) => this.paisService.getUser( )  ),
-        tap( console.log )
-      )
-      .subscribe( user => this.user = user );
+    // this.activatedRoute.params
+    //   .pipe(
+    //     switchMap( ({  }) => this.paisService.getUser( )  ),
+    //     tap( console.log )
+    //   )
+    //   .subscribe( user => this.user = user );
   }
 
 }

@@ -44,11 +44,6 @@ export class PaisService {
     return this.http.get<Country[]>( url );
   }
 
-  getPaisPorAlpha( id: string ):Observable<Country>{
-    const url = `${ this.apiUrl }/tabs/_GamesP_2022/id/${ id }`;
-    return this.http.get<Country>( url );
-  }
-
   getUser():Observable<User>{
     const url = `${ this.apiUrl }/tabs/_Usuarios/id/1`;
     return this.http.get<User>( url );
@@ -62,6 +57,11 @@ export class PaisService {
 
   getGameById( id: string ):Observable<Country>{
     const url = `${ this.apiUrl }/tabs/_GamesP_2022/id/${ id }`;
+    return this.http.get<Country>( url );
+  }
+
+  getGameByIdRegion( region:string, id: string ):Observable<Country>{
+    const url = `${ this.apiUrl }/tabs/${ region }/id/${ id }`;
     return this.http.get<Country>( url );
   }
 

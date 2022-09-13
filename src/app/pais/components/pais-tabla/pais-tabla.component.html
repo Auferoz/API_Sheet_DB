@@ -1,16 +1,3 @@
-<!-- <div class="row">
-    <div class="col-6 col-md-3 col-lg-2 p-3">
-      <div class="card">
-        <div class="bg-image hover-overlay ripple rounded-7" data-mdb-ripple-color="light">
-          <img src="{{game.poster}}" class="img-fluid" />
-          <a [routerLink]="['/pais', game.id]" >
-            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-          </a>
-        </div>
-      </div>
-    </div>
-</div>  -->
-
 <div class="contenedor mb-5">
   <div class="contenedor-card">
     <!-- Card -->
@@ -20,7 +7,6 @@
       [routerLink]="['/game', game.id]"
     >
       <div class="card-body text-white card-texto mask-custom">
-        <h5 class="card-title">{{game.title | titlecase }}</h5>
         <p class="card-text">
           {{game.date_start }}
         </p>
